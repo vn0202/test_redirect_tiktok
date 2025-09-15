@@ -7,21 +7,21 @@
 </head>
 <body>
 <script>
-  (function openStore(){
-    var tried = false;
-    function go(){
-      if (tried) return;
-      tried = true;
-      // Thử mở App Store app (scheme)
-      window.location.assign("itms-apps://itunes.apple.com/app/id6746228360");
-      // Nếu bị chặn → fallback sang web
-      setTimeout(function(){
-        window.location.replace("https://apps.apple.com/vn/app/musiclearn-english-with-music/id6746228360");
-      }, 1200);
-    }
-    // Thử auto
-    setTimeout(go, 50);
-  })();
+  // (function openStore(){
+  //   var tried = false;
+  //   function go(){
+  //     if (tried) return;
+  //     tried = true;
+  //     // Thử mở App Store app (scheme)
+  //     window.location.assign("itms-apps://itunes.apple.com/app/id6746228360");
+  //     // Nếu bị chặn → fallback sang web
+  //     setTimeout(function(){
+  //       window.location.replace("https://apps.apple.com/vn/app/musiclearn-english-with-music/id6746228360");
+  //     }, 1200);
+  //   }
+  //   // Thử auto
+  //   setTimeout(go, 50);
+  // })();
 </script>
 
 <div style="display:flex;justify-content:center;text-align:center;align-content:center;height:100%">
