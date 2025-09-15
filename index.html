@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đang mở App Store…</title>
+</head>
+<body>
+<script>
+  (function openStore(){
+    var tried = false;
+    function go(){
+      if (tried) return;
+      tried = true;
+      // Thử mở App Store app (scheme)
+      window.location.assign("itms-apps://itunes.apple.com/app/id6746228360");
+      // Nếu bị chặn → fallback sang web
+      setTimeout(function(){
+        window.location.replace("https://apps.apple.com/vn/app/musiclearn-english-with-music/id6746228360");
+      }, 1200);
+    }
+    // Thử auto
+    setTimeout(go, 50);
+  })();
+</script>
+
+<div style="display:flex;justify-content:center;text-align:center;align-content:center;height:100%">
+  <div style="max-height:max-content">
+    <h2 style="color:#e11d48;">🎵 Tải ứng dụng MusicLearn</h2>
+
+    <p>
+      <a href="https://apps.apple.com/vn/app/musiclearn-english-with-music/id6746228360"
+         target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;padding:12px 20px;background:#000;color:#fff;border-radius:8px;text-decoration:none;">
+        Tải cho iOS (App Store)
+      </a>
+    </p>
+
+    <!-- QR Code -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://apps.apple.com/vn/app/musiclearn-english-with-music/id6746228360"
+         alt="QR tải iOS" style="margin-top:20px;">
+
+    <div style="margin-top:24px">
+      👉 Nếu không mở được nút, hãy <b>bấm giữ vào QR code</b> để mở App Store.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
